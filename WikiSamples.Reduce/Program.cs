@@ -37,7 +37,7 @@ namespace WikiSamples.Reduce
     {
       var t = typeof (IMixinTarget);
 
-      var intList = ObjectFactory.Create<List<int>> (ParamList.Empty);
+      var intList = ObjectFactory.Create <List <int>> (ParamList.Empty);
       ((IReduceMixin) intList).InitialValue = 0;
       ((IReduceMixin) intList).ReduceFunction = (object firstItem, object secondItem) => (int) firstItem + (int) secondItem;
       
@@ -48,7 +48,7 @@ namespace WikiSamples.Reduce
 
       Console.WriteLine (((IReduceMixin) intList).Reduce ());
 
-      var stringList = ObjectFactory.Create<List<string>> (ParamList.Empty);
+      var stringList = ObjectFactory.Create <List <string>> (ParamList.Empty);
       ((IReduceMixin) stringList).InitialValue = "";
       ((IReduceMixin) stringList).ReduceFunction = (object firstItem, object secondItem) => (string) firstItem + " " + (string) secondItem;
 

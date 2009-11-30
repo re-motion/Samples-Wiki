@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikiSamples.ParrotSubclasse
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikiSamples.ParrotSuppressMacaw", "WikiSamples.ParrotSuppressMacaw\WikiSamples.ParrotSuppressMacaw.csproj", "{6749F4E9-FB66-4A8D-AB7E-5E518E868EA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikiSamples.DessertWaxExtensionMethodAlternative", "WikiSamples.DessertWaxExtensionMethodAlternative\WikiSamples.DessertWaxExtensionMethodAlternative.csproj", "{7CDDC2C5-1F2D-4B06-B992-4DBEA7CDCFC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikiSamples.Reduce", "WikiSamples.Reduce\WikiSamples.Reduce.csproj", "{129CA6CB-63E6-4066-A05E-BE08E1DF6622}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +77,14 @@ Global
 		{6749F4E9-FB66-4A8D-AB7E-5E518E868EA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6749F4E9-FB66-4A8D-AB7E-5E518E868EA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6749F4E9-FB66-4A8D-AB7E-5E518E868EA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CDDC2C5-1F2D-4B06-B992-4DBEA7CDCFC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CDDC2C5-1F2D-4B06-B992-4DBEA7CDCFC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CDDC2C5-1F2D-4B06-B992-4DBEA7CDCFC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CDDC2C5-1F2D-4B06-B992-4DBEA7CDCFC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{129CA6CB-63E6-4066-A05E-BE08E1DF6622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{129CA6CB-63E6-4066-A05E-BE08E1DF6622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{129CA6CB-63E6-4066-A05E-BE08E1DF6622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{129CA6CB-63E6-4066-A05E-BE08E1DF6622}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

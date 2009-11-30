@@ -1,6 +1,8 @@
 ﻿// This sample code does NOT use re-motion mixins, it shows how
 // extension methods are used for simple mixing. re-motion mixins
 // can do more than that, as the re-motion mixins tutorial demonstrates.
+// The re-motion mixin tutorial starts at 
+// http://re-motion.org/wiki/display/RM/re-motion+mixins
 
 
 using System;

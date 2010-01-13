@@ -12,6 +12,15 @@ namespace WikiSamples.DessertWaxUses
   [Uses (typeof (FloorWaxMixin))]
   public class DessertTopping
   {
+    public static DessertTopping Create ()
+    {
+      return ObjectFactory.Create<DessertTopping> (true, ParamList.Empty);
+    }
+
+    protected DessertTopping()
+    {
+    }
+
     public void TasteGood ()
     {
       Console.WriteLine ("Mmmmmm, tastes terrific!");
@@ -45,7 +54,10 @@ namespace WikiSamples.DessertWaxUses
 
       // generate the class that "inherits" dessert topping members and floor wax members
       // and instantiate that class
-      var myDessertWax = ObjectFactory.Create<DessertTopping> (ParamList.Empty);
+      var floorWaxMixinType = MixinTypeUtility.GetMixinTypesExact ().Single (mixinType => typeof (FloorWaxMixin).IsAssignableFrom (mixinType));
+      var floorWaxMixin = Activator.CreateInstance (floorWaxMixinType, 12);
+
+      var myDessertWax = ObjectFactory.Create<DessertTopping> (ParamList.Empty, floorWaxMixin);
 
       // this should pose no surprise -- TasteGood() is a method of DessertWax
       myDessertWax.TasteGood ();

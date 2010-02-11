@@ -1,20 +1,21 @@
 ﻿// Sample code for the re-motion mixins tutorial.
 // This sample code illustrates the matter discussed
-// on the wiki-page "re-motion mixins basics -- the 'Uses' attribute and the 'ObjectFactory'"
+// on the wiki-page "re-motion mixins basics -- the 'Extends' attribute'"
+
 
 using System;
 using Remotion.Implementation;
 using Remotion.Mixins;
 using Remotion.Reflection;
 
-namespace WikiSamples.DessertWaxUses
+namespace WikiSamples.DessertWaxAdditionalDependencies
 {
-  [Uses (typeof (FloorWaxMixin))]
   public class DessertTopping
   {
+    public const string TasteTerrificString = "Mmmmmm, tastes terrific!";
     public void TasteGood ()
     {
-      Console.WriteLine ("Mmmmmm, tastes terrific!");
+      Console.WriteLine (TasteTerrificString);
     }
   }
 
@@ -23,11 +24,23 @@ namespace WikiSamples.DessertWaxUses
     void SealFloor ();
   }
 
+  [Extends (typeof (DessertTopping))]
   public class FloorWaxMixin : IFloorWaxMixin
+  {
+    public const string SealFloorString = "Dirt, grime, even black heel marks -- wipe clean with a damp mop!";
+    public void SealFloor ()
+    {
+      Console.WriteLine (SealFloorString);
+    }
+  }
+
+  [Extends (typeof (FloorWaxMixin), AdditionalDependencies = new[] { typeof (FloorWaxMixin) })]
+  public class SealFloorErrTee : Mixin<FloorWaxMixin, IFloorWaxMixin>
   {
     public void SealFloor ()
     {
-      Console.WriteLine ("Dirt, grime, even black heel marks -- wipe clean with a damp mop!");
+      Base.SealFloor ();
+      Console.Error.WriteLine (FloorWaxMixin.SealFloorString);
     }
   }
 
